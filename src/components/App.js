@@ -7,9 +7,10 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      total: null,
-      next: null,
-      operation: null
+      total: '0',
+      next: '0',
+      operation: '',
+      isShowingResult: false
     }
   }
 
@@ -20,7 +21,7 @@ class App extends Component {
   render () {
     return (
       <div id='calculator'>
-        <Display result={this.state.total} />
+        <Display result={this.state.next} />
         <ButtonPanel clickHandler={buttonName => this.handleClick(buttonName)} />
       </div>
     )

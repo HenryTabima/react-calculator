@@ -33,7 +33,7 @@ class ButtonPanel extends Component {
         </div>
         <div className="row">
           <Button name='0' color={GRAY_COLOR} wide clickHandler={buttonName => this.props.clickHandler(buttonName)} />
-          <Button name='⚫' color={GRAY_COLOR} clickHandler={buttonName => this.props.clickHandler(buttonName)} />
+          <Button name='.' color={GRAY_COLOR} clickHandler={buttonName => this.props.clickHandler(buttonName)} />
           <Button name='=' clickHandler={buttonName => this.props.clickHandler(buttonName)} />
         </div>
       </div>

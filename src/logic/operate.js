@@ -2,7 +2,7 @@ import Big from 'big-js'
 
 function operate (numberOne, numberTwo, operation) {
   const selectedOperation = possibleOperations[operation]
-  return selectedOperation(numberOne, numberTwo)
+  if (selectedOperation) return selectedOperation(numberOne, numberTwo)
 }
 
 const possibleOperations = {
@@ -15,27 +15,27 @@ const possibleOperations = {
 }
 
 function divide (numberOne, numberTwo) {
-  return Big(numberOne).div(numberTwo)
+  return Big(numberOne).div(numberTwo).toString()
 }
 
 function multiply (numberOne, numberTwo) {
-  return Big(numberOne).times(numberTwo)
+  return Big(numberOne).times(numberTwo).toString()
 }
 
 function substract (numberOne, numberTwo) {
-  return Big(numberOne).minus(numberTwo)
+  return Big(numberOne).minus(numberTwo).toString()
 }
 
 function add (numberOne, numberTwo) {
-  return Big(numberOne).plus(numberTwo)
+  return Big(numberOne).plus(numberTwo).toString()
 }
 
 function percent (numberOne, numberTwo) {
-  return Big(numberOne).div(100).times(numberTwo)
+  return Big(numberOne).div(100).times(numberTwo).toString()
 }
 
 function invert (numberOne, numberTwo) {
-  return Big(numberOne).times(-1)
+  return Big(numberOne).times(-1).toString()
 }
 
 export default operate
