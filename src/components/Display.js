@@ -1,6 +1,5 @@
-'use strict'
-
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
 function Display ({ result }) {
   return <div>{result}</div>
@@ -8,7 +7,7 @@ function Display ({ result }) {
 
 Display.defaultProps = { result: '0' }
 
-Display.porpTypes = {
+Display.propTypes = {
   result: PropTypes.string
 }
 

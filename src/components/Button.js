@@ -1,8 +1,8 @@
-'use strict'
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
 function Button ({ name }) {
-  return <div>{name}</div>
+  return <button>{name}</button>
 }
 
 Button.propTypes = {
