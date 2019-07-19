@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Display ({ result }) {
-  return <div>{result}</div>
+  return <div id="display">{result}</div>
 }
 
 Display.defaultProps = { result: '0' }

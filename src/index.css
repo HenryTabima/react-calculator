@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator, #display, #button-panel {
+  display: flex;
+  width: 700px;
+  flex-direction: column;
+}
+
+#display {
+  box-sizing: border-box;
+  background-color: gray;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  padding: 30px;
+  justify-content: center;
+  text-align: right;
+  font-size: 2rem;
+}
