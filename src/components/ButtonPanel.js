@@ -1,37 +1,39 @@
 import React, { Component } from 'react'
 import Button from './Button'
 
+const GRAY_COLOR = '#CFCFCF'
+
 class ButtonPanel extends Component {
   render () {
     return (
       <div id='button-panel'>
-        <div>
-          <Button name='AC' />
-          <Button name='+/-' />
-          <Button name='%' />
+        <div className="row">
+          <Button name='AC' color={GRAY_COLOR} />
+          <Button name='+/-' color={GRAY_COLOR} />
+          <Button name='%' color={GRAY_COLOR} />
           <Button name='➗' />
         </div>
-        <div>
-          <Button name='7' />
-          <Button name='8' />
-          <Button name='9' />
+        <div className="row">
+          <Button name='7' color={GRAY_COLOR} />
+          <Button name='8' color={GRAY_COLOR} />
+          <Button name='9' color={GRAY_COLOR} />
           <Button name='❌' />
         </div>
-        <div>
-          <Button name='4' />
-          <Button name='5' />
-          <Button name='6' />
+        <div className="row">
+          <Button name='4' color={GRAY_COLOR} />
+          <Button name='5' color={GRAY_COLOR} />
+          <Button name='6' color={GRAY_COLOR} />
           <Button name='➖' />
         </div>
-        <div>
-          <Button name='1' />
-          <Button name='2' />
-          <Button name='3' />
+        <div className="row">
+          <Button name='1' color={GRAY_COLOR} />
+          <Button name='2' color={GRAY_COLOR} />
+          <Button name='3' color={GRAY_COLOR} />
           <Button name='➕' />
         </div>
-        <div>
-          <Button name='0' />
-          <Button name='.' />
+        <div className="row">
+          <Button name='0' color={GRAY_COLOR} wide />
+          <Button name='⚫' color={GRAY_COLOR} />
           <Button name='=' />
         </div>
       </div>
