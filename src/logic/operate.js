@@ -15,6 +15,7 @@ const possibleOperations = {
 }
 
 function divide (numberOne, numberTwo) {
+  if (numberTwo === '0') return '0'
   return Big(numberOne).div(numberTwo).toString()
 }
 

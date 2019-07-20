@@ -4,14 +4,11 @@ import ButtonPanel from './ButtonPanel'
 import calculate from '../logic/calculate'
 
 class App extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      total: '0',
-      next: '0',
-      operation: '',
-      isShowingResult: false
-    }
+  state = {
+    total: '0',
+    next: '0',
+    operation: '',
+    isShowingResult: false
   }
 
   handleClick (buttonName) {
