@@ -13,6 +13,7 @@ function calculate ({ total, next, operation, isShowingResult }, buttonName) {
       total = operation ? operate(total, next, operation) : next
       next = total
       operation = ''
+      if (total === 'Error') total = '0'
       break
     case '+/-':
       isShowingResult = true
@@ -28,11 +29,10 @@ function calculate ({ total, next, operation, isShowingResult }, buttonName) {
       isShowingResult = true
       total = operation ? operate(total, next, operation) : next
       next = total
+      operation = buttonName
       if (total === 'Error') {
         total = '0'
         operation = ''
-      } else {
-        operation = buttonName
       }
       break
     default:
