@@ -28,7 +28,12 @@ function calculate ({ total, next, operation, isShowingResult }, buttonName) {
       isShowingResult = true
       total = operation ? operate(total, next, operation) : next
       next = total
-      operation = buttonName
+      if (total === 'Error') {
+        total = '0'
+        operation = ''
+      } else {
+        operation = buttonName
+      }
       break
     default:
       next = isShowingResult ? buttonName : concatStringNumbers(next, buttonName)
