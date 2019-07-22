@@ -11,3 +11,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#calculator, #display, #button-panel {
+  display: flex;
+  width: 700px;
+  flex-direction: column;
+}
+
+#calculator {
+  box-shadow: 5px 10px 20px rgba(0,0,0,.2);
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #C7C7C7;
+}
+
+#display {
+  box-sizing: border-box;
+  background-color: gray;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  padding: 30px;
+  justify-content: center;
+  text-align: right;
+  font-size: 2rem;
+}
+
+#button-panel .row {
+  height: 100px;
+  display: flex;
+}
+
+#button-panel .row button{
+  font-size: 1.5rem;
+  border: 2px solid #C7C7C7;
+  outline: none;
+  cursor: pointer;
+  transition: transform .1s;
+}
+
+#button-panel .row button:active{
+  transform: translateY(2px)
+}
